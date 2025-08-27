@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        padding: 40px;
+    }
+}
+
+#gameContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80dvh;
+    gap: 20px;
+    width: 80dvw;
+
+    #labyrinthContainer {
+        position: relative;
+        width: 720px;
+        height: 80dvh;
+
+        p {
+            position: absolute;
+            font-size: x-large;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+        }
+
+        .row {
+            display: flex;
+            width: 100%;
+        }
+
+        .cell {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 20%;
+            height: 100%;
+        }
+    }
+
+    img {
+        width: 90px;
+        height: 80%;
+    }
+
+    #controlsContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 30%;
+        height: 70%;
+
+        form {
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+
+
+            #midContainer {
+                display: flex;
+                gap: 50px;
+            }
+
+            button {
+                border: 0;
+                background: transparent;
+                cursor: pointer;
+
+                img {
+                    width: 90px;
+                    height: 90px;
+                }
+            }
+
+            #btnUp:hover {
+                transform: translateY(-10px);
+                transition: 0.3s;
+            }
+
+            #btnDown:hover {
+                transform: translateY(10px);
+                transition: 0.3s;
+            }
+
+            #btnLeft:hover {
+                transform: translateX(-10px);
+                transition: 0.3s;
+            }
+
+            #btnRight:hover {
+                transform: translateX(10px);
+                transition: 0.3s;
+            }
+
+            #reset {
+                margin: 30px 0 20px 0;
+                padding: 1.3em 3em;
+                font-size: 12px;
+                text-transform: uppercase;
+                letter-spacing: 2.5px;
+                font-weight: 500;
+                color: #000;
+                background-color: #fff;
+                border: none;
+                border-radius: 45px;
+                box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+                transition: all 0.3s ease 0s;
+                cursor: pointer;
+                outline: none;
+            }
+
+            #reset:hover {
+                background-color: #282e2c;
+                box-shadow: 0px 15px 20px rgba(84, 96, 91, 0.4);
+                color: #fff;
+                transform: translateY(-7px);
+            }
+
+            #reset:active {
+                transform: translateY(-1px);
+            }
+        }
+    }
+}
+
+#error {
+    position: absolute;
+    font-size: x-large;
+    transform: translate(-50%, -50%);
+    top: 99%;
+    left: 50%;
+}
