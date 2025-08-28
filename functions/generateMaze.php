@@ -107,6 +107,16 @@ function generateMaze()
         }
         $array[$i] = $arrayRow;
     }
-    $array[rand(0, ($randRow)-1)][rand(0, ($randCol)-1)] = "b";
+
+    if ($array[rand(0, ($randRow)-1)][rand(0, ($randCol)-1)] != "b") {
+        $array[rand(0, ($randRow)-1)][rand(0, ($randCol)-1)] = "";
+    }
+
+    foreach ($array as $row) {
+        foreach ($row as $cell) {
+            
+        }
+    }
+
     return $array;
 }
